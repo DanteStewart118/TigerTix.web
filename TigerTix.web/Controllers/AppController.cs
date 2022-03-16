@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TigerTix.web.ViewModels;
 
 namespace TigerTix.web.Controllers
 {
@@ -16,7 +17,7 @@ namespace TigerTix.web.Controllers
         
 
         [HttpPost("/")]
-        public IActionResult Index(object model)
+        public IActionResult Index(IndexViewModel model)
         {
             return View();
         }
