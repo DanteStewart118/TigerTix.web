@@ -8,17 +8,27 @@
 <head>
     <title>TigerTix: @ViewBag.Title</title>
 </head>
-<body>
+<body style="background-color:grey">
     <h1>Hello World</h1>
 
     <form method="post">
-        <label>Your Name:</label>
+        <label>Username:</label>
         <br />
         <input type="text" name="username" />
+        <br />
+        <label>First name:</label>
+        <br />
+        <input type="text" name="firstname" />
+        <br />
+        <label>Last name:</label>
+        <br />
+        <input type="text" name="lastname" />
+        <br />
         <input type="submit" value="Store Name" />
     </form>
 
-
+    <button onclick="window.location.href = 'index.html'">Tickets page</button>
+    <button onclick="window.location.href = 'index2.html'">About us</button>
 
 </body>
 </html>
