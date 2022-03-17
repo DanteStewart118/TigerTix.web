@@ -7,7 +7,7 @@ namespace TigerTix.web.Data.Entities
 {
     public class User
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public int UserName { get; set; }
         public int FirstName { get; set; }
         public int LastName { get; set; }

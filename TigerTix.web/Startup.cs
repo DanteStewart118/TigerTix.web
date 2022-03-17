@@ -20,7 +20,7 @@ namespace TigerTix.web
         {
             services.AddDbContext<TigerTixContext> (cfg => { cfg.UseSqlServer(); });
             services.AddControllersWithViews();
-            services.AddMvc();
+            services.AddScoped<IUserRepository, UserRepository>();
             
         }
 
