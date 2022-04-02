@@ -17,13 +17,6 @@ namespace TigerTix.web.Controllers
             return View();
         }
         
-       /* 
-        [HttpPost("/")]
-        public IActionResult Index(IndexViewModel model)
-        {
-            return View();
-        }
-    */
         [HttpPost("/")]
         public IActionResult Index(User user)
         {

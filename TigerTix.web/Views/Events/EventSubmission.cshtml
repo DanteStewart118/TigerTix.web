@@ -1,0 +1,41 @@
+﻿@model IndexViewModel
+@{
+    ViewBag.Title = "Event Submission";
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TigerTix: @ViewBag.Title</title>
+</head>
+<body style="background-color:grey">
+    <h1>Tiger Tix</h1>
+
+    <form method="post">
+        <label>Event name: </label>
+        <br />
+        <input type="text" name="UserName" />
+        <br />
+        <label>Event Date: </label>
+        <br />
+        <input type="text" name="FirstName" />
+        <br />
+        <label>Location: </label>
+        <br />
+        <select name="Location" id="venues">
+            <option value="memstad">Memorial Stadium</option>
+            <option value="liljohn">Littlejohn Coliseum</option>
+            <option value="kingstad">Doug Kingsmore Stadium</option>
+            <option value="riggs">Riggs Field </option>
+        </select>
+        <br />
+        <input type="submit" value="Add Event" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</body>
+</html>
