@@ -8,17 +8,20 @@
 <head>
     <title>TigerTix: @ViewBag.Title</title>
 </head>
-<body style="background-color:grey">
-    <h1>Tiger Tix</h1>
+<body style="background-color:floralwhite">
+    <h1>Event Submission</h1>
 
     <form method="post">
         <label>Event name: </label>
         <br />
-        <input type="text" name="UserName" />
+        <input type="text" name="Event Name" />
         <br />
-        <label>Event Date: </label>
-        <br />
-        <input type="text" name="FirstName" />
+        <label>
+            Enter Date:
+            <br />
+            <input type="date" name="EventDate" required pattern="\d{4}-\d{2}-\d{2}">
+            <span class="validity"></span>
+        </label>
         <br />
         <label>Location: </label>
         <br />
@@ -29,7 +32,16 @@
             <option value="riggs">Riggs Field </option>
         </select>
         <br />
-        <input type="submit" value="Add Event" />
+        <label for="name">Description:</label>
+        <br />
+        <textarea rows="5" cols="50" name="description">
+         </textarea>
+        <br />
+        <label>Price</label>
+        <br />
+        <input type="text" />
+        <br />
+        <input type="submit" value="Submit Event" />
     </form>
     <br />
     <br />

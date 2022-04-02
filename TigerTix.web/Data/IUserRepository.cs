@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using TigerTix.web.Data.Entities;
-using TigerTix.Web.Data.Entities;
+
 
 namespace TigerTix.web.Data
 {
