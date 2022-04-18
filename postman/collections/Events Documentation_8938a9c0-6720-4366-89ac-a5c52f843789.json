@@ -1,0 +1,263 @@
+{
+    "info": {
+        "_postman_id": "a70ca97b-fd80-458d-8f30-11274deaa63c",
+        "name": "Events Documentation",
+        "description": "API for registering and listing events",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "events",
+            "item": [
+                {
+                    "name": "/events",
+                    "id": "d55c272e-a432-49ea-84ea-1b027870d3d7",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        },
+                        "description": "Returns a list of events"
+                    },
+                    "response": [
+                        {
+                            "id": "bd4cab99-d1bc-4bfd-a881-1af77f299b8c",
+                            "name": "Successful returned a list of events",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/events",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "events"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n  {\n    \"event_id\": \"sit\",\n    \"event_name\": \"voluptate dolor qui id ipsum\",\n    \"event_date\": \"fugiat\",\n    \"event_time\": \"nisi cillum Duis elit\",\n    \"event_description\": \"veniam est dolor commodo Ut\"\n  },\n  {\n    \"event_id\": \"do esse in velit\",\n    \"event_name\": \"in anim occaecat dolore\",\n    \"event_date\": \"exercitation\",\n    \"event_time\": \"ad nisi incididunt ullamco in\",\n    \"event_description\": \"commodo sit nostrud Ut ea\"\n  }\n]"
+                        },
+                        {
+                            "id": "35478f02-1122-407c-9e6f-000e9dfe5132",
+                            "name": "Invalid request",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/events",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "events"
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"message\": \"aliqua laboris velit\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "/events",
+                    "id": "1cd0749e-dfe4-4ec7-835a-70ade1d6c03a",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        },
+                        "description": "Lets a user post a new event"
+                    },
+                    "response": [
+                        {
+                            "id": "33f56195-d0e8-498e-add2-33f0812a10fe",
+                            "name": "Successfully created a new artist",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/events",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "events"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": ""
+                        },
+                        {
+                            "id": "a7cac6b7-10a9-4f61-a31b-5ba8061ab473",
+                            "name": "Invalid request",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/events",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "events"
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"message\": \"aliqua laboris velit\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "8cd984f6-75e5-4ac1-a7e5-73fd4757d2e8"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "75a732e6-6faa-46c4-9bc6-42db9d40d411",
+            "key": "baseUrl",
+            "value": "https://tigerchow.com/v1",
+            "type": "string"
+        }
+    ]
+}
