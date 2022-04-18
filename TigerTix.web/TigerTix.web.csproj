@@ -19,7 +19,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Events\" />
     <Folder Include="Images\" />
     <Folder Include="Views\Cart\" />
   </ItemGroup>

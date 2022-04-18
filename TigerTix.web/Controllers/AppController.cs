@@ -11,13 +11,13 @@ namespace TigerTix.web.Controllers
 {
     public class AppController : Controller
     {
-
-        public IActionResult Index()
-        {
-            return View();
-        }
+      
+    //    public IActionResult Index()
+    //    {
+     //       return View();
+     //  }
         
-        [HttpPost("/")]
+       // [HttpPost("/")]
         public IActionResult Index(User user)
         {
             _userRepository.SaveUser(user);

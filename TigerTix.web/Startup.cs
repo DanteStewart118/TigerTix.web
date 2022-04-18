@@ -21,6 +21,7 @@ namespace TigerTix.web
             services.AddDbContext<TigerTixContext> (cfg => { cfg.UseSqlServer(); });
             services.AddControllersWithViews();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IEventRepository, EventRepository>();
             
         }
 

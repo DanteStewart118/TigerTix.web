@@ -14,12 +14,12 @@
     <form method="post">
         <label>Event name: </label>
         <br />
-        <input type="text" name="Event Name" />
+        <input type="text" name="eventName" />
         <br />
         <label>
             Enter Date:
             <br />
-            <input type="date" name="EventDate" required pattern="\d{4}-\d{2}-\d{2}">
+            <input type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}">
             <span class="validity"></span>
         </label>
         <br />
@@ -34,14 +34,18 @@
         <br />
         <label for="name">Description:</label>
         <br />
-        <textarea rows="5" cols="50" name="description">
+        <textarea rows="5" cols="50" name="desc">
          </textarea>
         <br />
         <label>Price</label>
         <br />
-        <input type="text" />
+        <input type="number" step="any" id="ticketPrice"/>
         <br />
         <input type="submit" value="Submit Event" />
+        <button onclick="window.location.href = '/App/ShowUsers'">Show users</button>
+        <button onclick="window.location.href = '/Events/Index'">Want to Submit an Event?</button>
+        <button onclick="window.location.href = '/Events/Eventlist'">Event List</button>
+        <button onclick="window.location.href = '/Cart/Index'">Go to cart</button>
     </form>
     <br />
     <br />

@@ -6,22 +6,33 @@ using System.Threading.Tasks;
 using TigerTix.web.Data;
 using TigerTix.web.Data.Entities;
 using TigerTix.web.ViewModels;
+
 namespace TigerTix.web.Controllers
 {
     public class EventsController : Controller
     {
 
-        public IActionResult Index()
-        {
+
+      
+        public IActionResult Index(Event ev)
+            {
+            _eventRepository.SaveEvent(ev);
+            _eventRepository.SaveAll();
+
             return View();
-        }
+            }
 
-
-        public IActionResult EventSubmission()
+        public IActionResult Eventlist()
         {
-            return View();
+            var results = from u in _eventRepository.GetAllEvents()
+                          select u;
+            return View(results.ToList());
         }
-
-
+    
+        public EventsController(IEventRepository eventRepository)
+        {
+            _eventRepository = eventRepository;
+        }
+        private readonly IEventRepository _eventRepository;
     }
 }

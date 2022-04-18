@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TigerTix.web.Data;
 
 namespace TigerTix.web.Migrations
 {
     [DbContext(typeof(TigerTixContext))]
-    partial class TigerTixContextModelSnapshot : ModelSnapshot
+    [Migration("20220418022306_database")]
+    partial class database
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,9 +34,6 @@ namespace TigerTix.web.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("eventName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("location")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("ticketPrice")
