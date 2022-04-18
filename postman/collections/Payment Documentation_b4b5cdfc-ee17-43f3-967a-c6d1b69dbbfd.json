@@ -1,0 +1,101 @@
+{
+    "info": {
+        "_postman_id": "69061fb9-2700-4b40-95d3-5be3f4d2076e",
+        "name": "Payment Documentation",
+        "description": "Stores and returns users payment information",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "/events",
+            "id": "6705460e-b6c2-4a9a-890c-a2adeb51ec69",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/events",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "events"
+                    ]
+                },
+                "description": "Returns a list of users and their payment information"
+            },
+            "response": [
+                {
+                    "id": "704b3cd0-db01-4079-8fb0-a72c15bb3606",
+                    "name": "Successful returned a list of users and their payment information",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "[\n  {\n    \"card_number\": \"qui non sunt proident\",\n    \"cardholder_name\": \"mollit\",\n    \"expiration_date\": \"veniam eiusmod ullamco adipisicing\",\n    \"cvv_number\": \"ex sunt incididunt\",\n    \"user_id\": \"quis dolore in est\"\n  },\n  {\n    \"card_number\": \"tempor fugiat est incididunt deserunt\",\n    \"cardholder_name\": \"qui reprehenderit ea aliquip\",\n    \"expiration_date\": \"eu dolor voluptate\",\n    \"cvv_number\": \"officia in adipisicing dolor\",\n    \"user_id\": \"ad commodo\"\n  }\n]"
+                },
+                {
+                    "id": "10bd9eda-7c5f-464b-9b08-9a9d47156b59",
+                    "name": "Invalid request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"message\": \"cupidatat eiusmod\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "ee325cdb-d1da-46a6-a67b-a262e5d17e47",
+            "key": "baseUrl",
+            "value": "https://example.io/v1",
+            "type": "string"
+        }
+    ]
+}
