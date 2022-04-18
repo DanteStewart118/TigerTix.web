@@ -1,0 +1,101 @@
+{
+    "info": {
+        "_postman_id": "5bcd04bb-3032-4809-80fe-4fb29e5c3ad8",
+        "name": "Notification Documentation",
+        "description": "Returns a receipt to the customer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "/Notification",
+            "id": "ebb62934-b5f8-4fda-a797-251390173d7f",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/Notification",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "Notification"
+                    ]
+                },
+                "description": "Returns a receipt to the customer"
+            },
+            "response": [
+                {
+                    "id": "fb114561-b004-4421-9357-840e929385a7",
+                    "name": "Successful returned a list of users and their contact information",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/Notification",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "Notification"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "[\n  {\n    \"user_name\": \"ut ea voluptate\",\n    \"purchase_information\": \"in aliqua anim\",\n    \"ticket_information\": \"in voluptate\"\n  },\n  {\n    \"user_name\": \"culp\",\n    \"purchase_information\": \"occaecat\",\n    \"ticket_information\": \"dolore anim\"\n  }\n]"
+                },
+                {
+                    "id": "9ecfd348-0a6f-4f41-a856-3f30990ea05c",
+                    "name": "Invalid request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/Notification",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "Notification"
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"message\": \"Lorem pariatu\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "a84b0d0f-51d3-4d69-bce5-c421a455148f",
+            "key": "baseUrl",
+            "value": "https://tigerchow.com/v1",
+            "type": "string"
+        }
+    ]
+}
