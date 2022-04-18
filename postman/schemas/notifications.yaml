@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Notification
+  description: Returns a receipt to the customer
+servers:
+  - url: https://tigerchow.com/v1
+paths:
+  /Notification:
+    get:
+      description: Returns a receipt to the customer         
+      responses:
+        '200': 
+          description: Successful returned a list of users and their contact information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  #  ----- Added line  --------------------------------
+                  $ref: '#/components/schemas/Notification'
+                  #  ---- /Added line  --------------------------------
+                  #  ---- /Added line  --------------------------------
+        '400':
+          #  ----- Added line  ----------------------------------------
+          $ref: '#/components/responses/400Error'
+          #  ---- /Added line  ----------------------------------------
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    Notification:
+      type: object
+      required:
+        - username
+      properties:
+        user_name:
+          type: string
+        purchase_information:
+          type: string
+        ticket_information:
+          type: string
+        
+  responses:
+    400Error:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            type: object 
+            properties:
+              message:
+                type: string
+      
+  
