@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Ticket
+  description: Gets a list of ticket information
+paths:
+  /events:
+    get:
+      description: Returns a list of ticket information           
+      responses:
+        '200': 
+          description: Successful returned a list of users and their contact information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  #  ----- Added line  --------------------------------
+                  $ref: '#/components/schemas/Ticket'
+                  #  ---- /Added line  --------------------------------
+                  #  ---- /Added line  --------------------------------
+        '400':
+          #  ----- Added line  ----------------------------------------
+          $ref: '#/components/responses/400Error'
+          #  ---- /Added line  ----------------------------------------
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    Ticket:
+      type: object
+      required:
+        - username
+      properties:
+        ticket_number:
+          type: string
+        ticket_seat:
+          type: string
+        ticket_price:
+          type: string
+        
+          
+  responses:
+    400Error:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            type: object 
+            properties:
+              message:
+                type: string
+      
+  

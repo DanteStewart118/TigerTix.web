@@ -1,0 +1,101 @@
+{
+    "info": {
+        "_postman_id": "02b86f48-2367-4e46-accf-97c2cceb0d87",
+        "name": "Ticket Documentation",
+        "description": "Gets a list of ticket information",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "/events",
+            "id": "c36b2730-df9a-480d-b9e5-f5aaa35ebbd0",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/events",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "events"
+                    ]
+                },
+                "description": "Returns a list of ticket information"
+            },
+            "response": [
+                {
+                    "id": "9c03c8e2-cc70-45b6-8cbc-d6e6ef21264b",
+                    "name": "Successful returned a list of users and their contact information",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "[\n  {\n    \"ticket_number\": \"elit id consequat\",\n    \"ticket_seat\": \"sed mollit voluptate ex\",\n    \"ticket_price\": \"veniam id\"\n  },\n  {\n    \"ticket_number\": \"pariatur commodo officia culpa\",\n    \"ticket_seat\": \"culpa ex sint velit\",\n    \"ticket_price\": \"pariatur exercitation velit ullamco\"\n  }\n]"
+                },
+                {
+                    "id": "a31caebc-5036-4afe-916c-da822e2baef4",
+                    "name": "Invalid request",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "events"
+                            ]
+                        }
+                    },
+                    "status": "Bad Request",
+                    "code": 400,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"message\": \"mollit\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "75409b77-0ace-41de-a3ec-7ad44a4f1bcf",
+            "key": "baseUrl",
+            "value": "/",
+            "type": "string"
+        }
+    ]
+}
