@@ -1,17 +1,17 @@
 {
     "info": {
-        "_postman_id": "393b8952-68fd-4a56-842d-4b1f7e13339d",
-        "name": "Account Documentation",
-        "description": "Returns a list of users and their information",
+        "_postman_id": "a70ca97b-fd80-458d-8f30-11274deaa63c",
+        "name": "Events Documentation",
+        "description": "API for registering and listing events",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
     },
     "item": [
         {
-            "name": "account",
+            "name": "events",
             "item": [
                 {
-                    "name": "/account",
-                    "id": "267b22a6-7245-4c9c-a73d-016a09ce67c4",
+                    "name": "/events",
+                    "id": "d55c272e-a432-49ea-84ea-1b027870d3d7",
                     "request": {
                         "method": "GET",
                         "header": [
@@ -21,30 +21,36 @@
                             }
                         ],
                         "url": {
-                            "raw": "{{baseUrl}}/account",
+                            "raw": "{{baseUrl}}/events",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
-                                "account"
+                                "events"
                             ]
                         },
-                        "description": "Returns a list of users"
+                        "description": "Returns a list of events"
                     },
                     "response": [
                         {
-                            "id": "74bb16c0-8edf-46f0-b919-4183d9e014ce",
+                            "id": "bd4cab99-d1bc-4bfd-a881-1af77f299b8c",
                             "name": "Successful returned a list of events",
                             "originalRequest": {
                                 "method": "GET",
-                                "header": [],
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/account",
+                                    "raw": "{{baseUrl}}/events",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
-                                        "account"
+                                        "events"
                                     ]
                                 }
                             },
@@ -59,21 +65,27 @@
                             ],
                             "cookie": [],
                             "responseTime": null,
-                            "body": "[\n  {\n    \"username\": \"dolore tempor incididunt non nulla\",\n    \"first_name\": \"in Duis elit dolor\",\n    \"last_name\": \"dolor commodo\",\n    \"password\": \"in consequat nisi ut\",\n    \"user_id\": \"reprehenderit mollit dolore\"\n  },\n  {\n    \"username\": \"culpa ad aut\",\n    \"first_name\": \"deserunt sed ad irure\",\n    \"last_name\": \"esse tempor\",\n    \"password\": \"eiusmod dolor\",\n    \"user_id\": \"do incididunt\"\n  }\n]"
+                            "body": "[\n  {\n    \"event_id\": \"sit\",\n    \"event_name\": \"voluptate dolor qui id ipsum\",\n    \"event_date\": \"fugiat\",\n    \"event_time\": \"nisi cillum Duis elit\",\n    \"event_description\": \"veniam est dolor commodo Ut\"\n  },\n  {\n    \"event_id\": \"do esse in velit\",\n    \"event_name\": \"in anim occaecat dolore\",\n    \"event_date\": \"exercitation\",\n    \"event_time\": \"ad nisi incididunt ullamco in\",\n    \"event_description\": \"commodo sit nostrud Ut ea\"\n  }\n]"
                         },
                         {
-                            "id": "e60fda3d-cf3e-409e-957e-716265920a12",
+                            "id": "35478f02-1122-407c-9e6f-000e9dfe5132",
                             "name": "Invalid request",
                             "originalRequest": {
                                 "method": "GET",
-                                "header": [],
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
                                 "url": {
-                                    "raw": "{{baseUrl}}/account",
+                                    "raw": "{{baseUrl}}/events",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
-                                        "account"
+                                        "events"
                                     ]
                                 }
                             },
@@ -88,13 +100,13 @@
                             ],
                             "cookie": [],
                             "responseTime": null,
-                            "body": "{\n  \"message\": \"pariatur exercitation dolore eu\"\n}"
+                            "body": "{\n  \"message\": \"aliqua laboris velit\"\n}"
                         }
                     ]
                 },
                 {
-                    "name": "/account",
-                    "id": "ea9077bd-55c0-46df-a6f4-37b2306cc1b1",
+                    "name": "/events",
+                    "id": "1cd0749e-dfe4-4ec7-835a-70ade1d6c03a",
                     "protocolProfileBehavior": {
                         "disableBodyPruning": true
                     },
@@ -112,7 +124,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n  \"username\": 87555840,\n  \"first_name\": \"officia fugiat culpa rep\",\n  \"last_name\": \"non reprehenderit commodo eiusmod\",\n  \"password\": \"non laborum anim\",\n  \"user_id\": \"ad sint elit eu adipisicing\"\n}",
+                            "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
                             "options": {
                                 "raw": {
                                     "language": "json"
@@ -120,26 +132,32 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/account",
+                            "raw": "{{baseUrl}}/events",
                             "host": [
                                 "{{baseUrl}}"
                             ],
                             "path": [
-                                "account"
+                                "events"
                             ]
                         },
-                        "description": "Lets a user post a new artist"
+                        "description": "Lets a user post a new event"
                     },
                     "response": [
                         {
-                            "id": "e65a26b8-b55e-4c22-96eb-50626d1e7f2f",
+                            "id": "33f56195-d0e8-498e-add2-33f0812a10fe",
                             "name": "Successfully created a new artist",
                             "originalRequest": {
                                 "method": "POST",
-                                "header": [],
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n  \"username\": 87555840,\n  \"first_name\": \"officia fugiat culpa rep\",\n  \"last_name\": \"non reprehenderit commodo eiusmod\",\n  \"password\": \"non laborum anim\",\n  \"user_id\": \"ad sint elit eu adipisicing\"\n}",
+                                    "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -147,12 +165,12 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{baseUrl}}/account",
+                                    "raw": "{{baseUrl}}/events",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
-                                        "account"
+                                        "events"
                                     ]
                                 }
                             },
@@ -170,14 +188,20 @@
                             "body": ""
                         },
                         {
-                            "id": "34f0cf71-af90-4e8f-87ed-d097c306cbce",
+                            "id": "a7cac6b7-10a9-4f61-a31b-5ba8061ab473",
                             "name": "Invalid request",
                             "originalRequest": {
                                 "method": "POST",
-                                "header": [],
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
                                 "body": {
                                     "mode": "raw",
-                                    "raw": "{\n  \"username\": 87555840,\n  \"first_name\": \"officia fugiat culpa rep\",\n  \"last_name\": \"non reprehenderit commodo eiusmod\",\n  \"password\": \"non laborum anim\",\n  \"user_id\": \"ad sint elit eu adipisicing\"\n}",
+                                    "raw": "{\n  \"event_id\": \"exercitation tempor ut\",\n  \"event_name\": \"Excepteur aute in ipsum\",\n  \"event_date\": -19021642,\n  \"event_time\": \"culpa sint\",\n  \"event_description\": \"ut ips\"\n}",
                                     "options": {
                                         "raw": {
                                             "language": "json"
@@ -185,12 +209,12 @@
                                     }
                                 },
                                 "url": {
-                                    "raw": "{{baseUrl}}/account",
+                                    "raw": "{{baseUrl}}/events",
                                     "host": [
                                         "{{baseUrl}}"
                                     ],
                                     "path": [
-                                        "account"
+                                        "events"
                                     ]
                                 }
                             },
@@ -205,17 +229,32 @@
                             ],
                             "cookie": [],
                             "responseTime": null,
-                            "body": "{\n  \"message\": \"pariatur exercitation dolore eu\"\n}"
+                            "body": "{\n  \"message\": \"aliqua laboris velit\"\n}"
                         }
                     ]
                 }
             ],
-            "id": "2f7c8126-ab83-4bb2-b0e6-4aabb432d7fb"
+            "id": "8cd984f6-75e5-4ac1-a7e5-73fd4757d2e8"
         }
     ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
     "variable": [
         {
-            "id": "3a264733-9fae-4929-b064-6356cbef9fbf",
+            "id": "75a732e6-6faa-46c4-9bc6-42db9d40d411",
             "key": "baseUrl",
             "value": "https://tigerchow.com/v1",
             "type": "string"
