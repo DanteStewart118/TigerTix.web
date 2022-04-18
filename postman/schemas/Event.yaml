@@ -1,14 +1,18 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: Accounts
-  description: Returns a list of users and their information
+  title: Events
+  description: Returns a list of events and post events
+
 servers:
   - url: https://tigerchow.com/v1
+
+security:
+  - BasicAuth: []
 paths:
-  /account:
+  /events:
     get:
-      description: Returns a list of users           
+      description: Returns a list of events           
       responses:
         '200': 
           description: Successful returned a list of events
@@ -18,7 +22,7 @@ paths:
                 type: array
                 items:
                   #  ----- Added line  --------------------------------
-                  $ref: '#/components/schemas/Account'
+                  $ref: '#/components/schemas/Events'
                   #  ---- /Added line  --------------------------------
                   #  ---- /Added line  --------------------------------
         '400':
@@ -26,7 +30,7 @@ paths:
           $ref: '#/components/responses/400Error'
           #  ---- /Added line  ----------------------------------------
     post:
-      description: Lets a user post a new artist
+      description: Lets a user post a new event
       requestBody:
         required: true
         content:
@@ -36,20 +40,20 @@ paths:
               required:
                 - username
               properties:
-                first_name:
+                event_id:
                   type: string
-                last_name:
+                event_name:
                   type: string
-                username:
+                event_date:
                   type: integer
-                password:
+                event_time:
                   type: string
-                user_id:
+                event_description:
                   type: string
 
       responses:
         '200':
-          description: Successfully created a new artist
+          description: Successfully created a new event
 
         '400':
           description: Invalid request
@@ -68,20 +72,20 @@ components:
       scheme: basic
 
   schemas:
-    Account:
+    Events:
       type: object
       required:
         - username
       properties:
-        first_name:
+        event_id:
           type: string
-        last_name:
+        event_name:
           type: string
-        username:
+        event_date:
           type: string
-        password:
+        event_time:
           type: string
-        user_id:
+        event_description:
           type: string
           
   responses:
@@ -94,4 +98,3 @@ components:
             properties:
               message:
                 type: string
-      
