@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Payment
+  description: Stores and returns users payment information
+servers:
+  - url: https://tigerchow.com/v1
+paths:
+  /payment:
+    get:
+      description: Returns a list of users and their payment information           
+      responses:
+        '200': 
+          description: Successful returned a list of users and their payment information
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  #  ----- Added line  --------------------------------
+                  $ref: '#/components/schemas/Payment'
+                  #  ---- /Added line  --------------------------------
+                  #  ---- /Added line  --------------------------------
+        '400':
+          #  ----- Added line  ----------------------------------------
+          $ref: '#/components/responses/400Error'
+          #  ---- /Added line  ----------------------------------------
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    Payment:
+      type: object
+      required:
+        - username
+      properties:
+        card_number:
+          type: string
+        cardholder_name:
+          type: string
+        expiration_date:
+          type: string
+        cvv_number:
+          type: string
+        user_id:
+          type: string
+          
+  responses:
+    400Error:
+      description: Invalid request
+      content:
+        application/json:
+          schema:
+            type: object 
+            properties:
+              message:
+                type: string
+      
+  
