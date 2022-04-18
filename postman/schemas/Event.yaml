@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: Events
-  description: Returns a list of events and post events
+  description: Returns a list of events and post event
 
 servers:
   - url: https://tigerchow.com/v1
